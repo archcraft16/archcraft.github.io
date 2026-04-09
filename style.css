@@ -669,3 +669,36 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* NAVBAR MOBILE MENU (ADD HERE) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: rgba(255,255,255,0.95);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 15px 0;
+  }
+}
