@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  color-scheme: light;
+}
 
 body {
   background: linear-gradient(135deg, #d3af90d7, #8ea5d0d9);
@@ -142,8 +145,22 @@ font-size: 72px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.3); /* improves visibility over overlay/video */
 
 }
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* THIS FIXES OVERLAP */
+  justify-content: center;
+}
 
+@media (max-width: 600px) {
+  .hero-buttons {
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+  }
+}
 .hero-buttons a {
+  width: 80%; /* consistent button width */
+    text-align: center;
   padding: 12px 28px;
   border-radius: 25px;
   font-weight: 600;
@@ -358,6 +375,12 @@ section h2 {
   transform: translateY(-2px);
 }
 /* CONTACT CTA */
+.contact-cta {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .contact-cta a {
   padding: 14px 30px;
   border-radius: 40px;
@@ -372,6 +395,17 @@ section h2 {
   color: #fff;
   font-weight: 700;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+@media (max-width: 600px) {
+  .contact-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-cta a {
+    width: 80%;
+    text-align: center;
+  }
 }
 
 /* WhatsApp button */
